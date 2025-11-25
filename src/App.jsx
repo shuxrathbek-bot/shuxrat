@@ -1,8 +1,15 @@
-import { useState } from "react"; 
+import { useState, useEffect } from "react"; 
 
 export default function HabitTracker() { 
-  const [habits, setHabits] = useState([]);
+  const [habits, setHabits] = useState(() => {
+    const saved = localStorage.getItem('habits');
+    return saved ? JSON.parse(saved) : [];
+  });
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem('habits', JSON.stringify(habits));
+  }, [habits]);
 
   const addHabit = () => {
     if (!input.trim()) return; 
