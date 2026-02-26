@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto24 - Mashina Sotish, Sotib olish va 24/7 Yordam</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1D4ED8',
+                        secondary: '#0F172A',
+                    }
+                }
+            }
+        }
+
+        // Modalni boshqarish funksiyasi
+        function toggleModal() {
+            const modal = document.getElementById('contactModal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <span class="text-3xl font-extrabold text-primary italic leading-none">AUTO24</span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-semibold">
+                    <a href="#home" class="hover:text-primary transition">Asosiy</a>
+                    <a href="#services" class="hover:text-primary transition">Xizmatlar</a>
+                    <a href="#emergency" class="text-red-600 hover:text-red-700 transition">24/7 Yordam</a>
+                </div>
+                <div>
+                    <a href="tel:+998901234567" class="bg-primary text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-blue-800 transition">
+                        Qo'ng'iroq
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative bg-secondary py-24 md:py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                Avtomobil olami <br><span class="text-primary">Sizning kaftingizda</span>
+            </h1>
+            <p class="text-gray-400 text-xl max-w-2xl mx-auto mb-10">
+                Mashina sotish, sotib olish va yo'ldagi tezkor yordam — hammasi bir joyda. Ishonchli va tezkor xizmat.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-primary text-white px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">Mashina sotib olish</button>
+                <button class="bg-white text-secondary px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition">E'lon berish</button>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+    </section>
+
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100">
+                <div class="text-4xl mb-4">🚗</div>
+                <h3 class="text-2xl font-bold mb-3">Sotib olish</h3>
+                <p class="text-gray-500 mb-6">Yuzlab tekshirilgan avtomobillar orasidan o'zingizga mosini toping.</p>
+                <a href="#" class="text-primary font-bold">Ko'proq →</a>
+            </div>
+            <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="text-2xl font-bold mb-3">Sotish</h3>
+                <p class="text-gray-500 mb-6">Mashinangizni tez va eng yaxshi narxlarda xaridorga soting.</p>
+                <a href="#" class="text-primary font-bold">E'lon berish →</a>
+            </div>
+            <div class="bg-primary p-8 rounded-[2rem] shadow-xl text-white">
+                <div class="text-4xl mb-4">🛠️</div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Texnik ko'rik</h3>
+                <p class="text-blue-100 mb-6">Mutaxassislarimiz mashinani to'liq tekshirib berishadi.</p>
+                <a href="#" class="text-white font-bold underline">Xizmatlar →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergency" class="py-10 max-w-7xl mx-auto px-4 mb-20">
+        <div class="bg-secondary rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
+            <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="max-w-xl">
+                    <div class="inline-block bg-red-600 text-white text-xs font-black px-3 py-1 rounded-md mb-6 animate-pulse uppercase tracking-widest">Live Help</div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">Yo'lda yordam kerakmi? <br>Biz 24/7 ishlaymiz!</h2>
+                    <p class="text-gray-400 text-lg mb-8">Evakuator, usta yoki yoqilg'i yetkazib berish. Bir tugmani bosing va biz yo'lga chiqamiz.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="tel:+998901234567" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 transition transform hover:scale-105 shadow-lg shadow-red-600/30">
+                            <span>📞</span> +998 (90) 123-45-67
+                        </a>
+                        <button onclick="toggleModal()" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-2xl font-bold transition">
+                            Xabar qoldirish
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 w-full lg:w-auto">
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
+                        <div class="text-3xl mb-2">🚚</div>
+                        <div class="text-white font-bold">Evakuator</div>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
+                        <div class="text-3xl mb-2">🔧</div>
+                        <div class="text-white font-bold">Tezkor Usta</div>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
+                        <div class="text-3xl mb-2">🔋</div>
+                        <div class="text-white font-bold">Zaryadlash</div>
+                    </div>
+                    <a href="https://t.me/auto24_uz" target="_blank" class="bg-[#0088cc] p-6 rounded-3xl text-center hover:scale-105 transition">
+                        <div class="text-3xl mb-2 text-white">✈️</div>
+                        <div class="text-white font-bold">Telegram</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contactModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-[100] items-center justify-center p-4">
+        <div class="bg-white p-8 rounded-[2.5rem] w-full max-w-md shadow-2xl relative">
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Tezkor aloqa</h3>
+            <p class="text-gray-500 mb-6">Ma'lumotlaringizni qoldiring, mutaxassisimiz sizga 2 daqiqada chiqadi.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Xabar yuborildi!'); toggleModal();" class="space-y-4">
+                <input type="text" required placeholder="Ismingiz" class="w-full bg-gray-100 border-none p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary transition">
+                <input type="tel" required placeholder="Telefoningiz" class="w-full bg-gray-100 border-none p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary transition">
+                <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/30 hover:bg-blue-800 transition">Yuborish</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-white py-10 border-t border-gray-100 text-center">
+        <p class="text-gray-500 font-medium">© 2026 AUTO24 — Barcha xizmatlar litsenziyalangan.</p>
+    </footer>
+
+</body>
+</html>
